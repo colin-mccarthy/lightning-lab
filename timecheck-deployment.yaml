@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: time-check
+  namespace: dvl1987
+  labels:
+    app: time-check
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: time-check
+  template:
+    metadata:
+      labels:
+        app: time-check
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        ports:
+        - containerPort: 80
