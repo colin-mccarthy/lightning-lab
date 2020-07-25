@@ -14,8 +14,7 @@ spec:
     - mountPath: /opt
       name: data-volume
 ```      
-      
-```diff    
+ ```        
   volumes:
   - name: data-volume
     hostPath:
