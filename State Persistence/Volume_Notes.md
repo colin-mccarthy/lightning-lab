@@ -15,12 +15,12 @@ spec:
     name: alpine
     command: ["bin/shell","-c"]
     args: ["shuff -i 0-100 -n >> /opt/number.out;"]
-+   volumeMounts:
+    volumeMounts:
 +   - mountPath: /opt
 +     name: data-volume 
 
-+ volumes:
-+ - name: data-volume
+  volumes:
+  - name: data-volume
 +   hostPath:
 +       path: /data
 +       type: Directory
