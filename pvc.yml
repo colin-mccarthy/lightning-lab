@@ -3,12 +3,8 @@ kind: PersistentVolumeClaim
 metadata:
   name: log-claim
 spec:
-  storageClassName: my-csi-plugin
-  dataSource:
-    name: existing-src-pvc-name
-    kind: PersistentVolumeClaim
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 200Mi
