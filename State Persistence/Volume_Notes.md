@@ -1,6 +1,12 @@
-At its core, a volume is just a directory, possibly with some data in it, which is accessible to the Containers in a Pod. How that directory comes to be, the medium that backs it, and the contents of it are determined by the particular volume type used.
+From Kubernetes.io docs
 
-To use a volume, a Pod specifies what volumes to provide for the Pod (the .spec.volumes field) and where to mount those into Containers (the .spec.containers[*].volumeMounts field).
+"At its core, a volume is just a directory, possibly with some data in it, which is accessible to the Containers in a Pod. How that directory comes to be, the medium that backs it, and the contents of it are determined by the particular volume type used.
+
+To use a volume, a Pod specifies what volumes to provide for the Pod (the .spec.volumes field) and where to mount those into Containers (the .spec.containers[*].volumeMounts field)."
+
+My Notes:
+
+volumeMounts is required per container as you may have multiple containers in a deployment and the volume may mount to one or more containers. The volume may also mount at different location based on the container.
 
 
 ```diff
