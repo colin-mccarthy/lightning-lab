@@ -14,26 +14,15 @@ spec:
     - mountPath: /opt
       name: data-volume
 ```      
- ```        
+ ```diff       
   volumes:
   - name: data-volume
-    hostPath:
-        path: /data
-        type: Directory
++   hostPath:
++       path: /data
++       type: Directory
  ```
 
 
-
-
-
-
-```diff
- {
-   "some_param": true,
- + "another_param": true,
-   "head_sha": "f83a356604ae3c5d0"
- }
- ```
  
  
  
