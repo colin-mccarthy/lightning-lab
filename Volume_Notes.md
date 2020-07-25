@@ -19,9 +19,17 @@ spec:
 +   hostPath:
 +       path: /data
 +       type: Directory
+```
+# AWS Elastic Block Storage
+ 
+```diff
+  volumes:
+  - name: data-volume
+  
++   awsElasticBlockStore:
++       volumeID: <volume-id>
++       fsType: ext4
  ```
-
-
  
  
  
