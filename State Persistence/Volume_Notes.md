@@ -34,8 +34,7 @@ spec:
  
 ```diff
   volumes:
-  - name: data-volume
-  
+  - name: data-volume  
 +   awsElasticBlockStore:
 +       volumeID: <volume-id>
 +       fsType: ext4
