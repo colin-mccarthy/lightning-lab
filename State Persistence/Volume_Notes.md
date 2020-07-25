@@ -20,7 +20,7 @@ spec:
 +     name: data-volume 
 
   volumes:
-  - name: data-volume
++ - name: data-volume
 +   hostPath:
 +       path: /data
 +       type: Directory
@@ -34,7 +34,7 @@ spec:
  
 ```diff
   volumes:
-  - name: data-volume  
++ - name: data-volume  
 +   awsElasticBlockStore:
 +       volumeID: <volume-id>
 +       fsType: ext4
