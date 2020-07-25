@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Pod
+metadata:
+  name: command-test
+  namespace: default
+spec:
+  containers:
+  - image: alpine
+    name: alpine
+    command: ["bin/shell","-c"]
+    args: ["shuff -i 0-100 -n >> /opt/number.out;"]
