@@ -1,3 +1,4 @@
+```
 apiVersion: apps/v1
 kind: Pod
 metadata:
@@ -12,6 +13,8 @@ spec:
     volumeMounts:
     - mountPath: /opt
       name: data-volume
+```      
+      
 ```diff    
   volumes:
   - name: data-volume
