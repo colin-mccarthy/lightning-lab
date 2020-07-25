@@ -1,4 +1,4 @@
-# Single Node Kunernetes Cluster - hostPath: type:Directory
+# Single Node Cluster - hostPath: type:Directory
 
 ```diff
 apiVersion: apps/v1
