@@ -10,11 +10,35 @@ without knowing the details of the particular cloud environment."
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: log-claim
+  name: myclaim
 spec:
   accessModes:
 +   - ReadWriteOnce
   resources:
     requests:
 +     storage: 200Mi
+```
+
+# Using a PVC in a Pod
+
+KodeKloud DOcs:
+"Once you create a PVC use it in a POD definition file by specifying the PVC Claim name under persistentVolumeClaim 
+section in the volumes section like this:"
+
+```diff
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: myfrontend
+      image: nginx
+      volumeMounts:
+      - mountPath: "/var/www/html"
+        name: mypd
+  volumes:
+    - name: mypd
++     persistentVolumeClaim:
++       claimName: myclaim
 ```
