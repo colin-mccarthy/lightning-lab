@@ -1,5 +1,9 @@
 # Persistant Volumes
 
+OpenShift docs:
+
+"The Kubernetes persistent volume framework allows administrators to provision a cluster with persistent storage and gives users a way to request those resources without having any knowledge of the underlying infrastructure."
+
 
 ```diff
 apiVersion: v1
