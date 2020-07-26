@@ -35,8 +35,8 @@ spec:
     - name: myfrontend
       image: nginx
       volumeMounts:
-      - mountPath: "/var/www/html"
-        name: mypd
++     - mountPath: "/var/www/html"
++       name: mypd
   volumes:
     - name: mypd
 +     persistentVolumeClaim:
