@@ -25,6 +25,14 @@ spec:
 +     port: 8080
 +   failureThreshold: 1
 +   periodSeconds: 10
+
+
++ startupProbe:
++   httpGet:
++     path: /api/ready
++     port: 8080
++   failureThreshold: 30
++   periodSeconds: 10
       
   volumes:
     - name: mypd
