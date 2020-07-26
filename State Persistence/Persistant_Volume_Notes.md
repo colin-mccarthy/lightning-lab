@@ -8,9 +8,11 @@ metadata:
   name: log-volume
 spec:
   capacity:
-+   storage: 1Gi
++   storage: 10Gi
   accessModes:
 +   - ReadWriteOnce
-+ hostPath:
-+   path: /opt/volume/nginx
+
++ awsElasticBlockStore:
++     volumeID: <volume-id>
++     fsType: ext4
 ```
