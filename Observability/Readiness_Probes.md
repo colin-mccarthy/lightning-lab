@@ -1,4 +1,4 @@
-# Redainess Probes
+# Readiness Probes
 
 ```diff
 apiVersion: v1
