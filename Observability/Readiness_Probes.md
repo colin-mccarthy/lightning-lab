@@ -32,8 +32,7 @@ spec:
 ```
 Kubernetes Docs:
 
-"Readiness probes are configured similarly to liveness probes. The only difference is that you use the readinessProbe 
-field instead of the livenessProbe field."
+"Readiness probes runs on the container during its whole lifecycle."
 
 ```
 readinessProbe:
