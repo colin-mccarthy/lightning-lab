@@ -9,10 +9,8 @@ metadata:
 spec:
   capacity:
 +   storage: 1Gi
-  volumeMode: Filesystem
   accessModes:
 +   - ReadWriteOnce
-  storageClassName: manual
 + hostPath:
 +   path: /opt/volume/nginx
 ```
